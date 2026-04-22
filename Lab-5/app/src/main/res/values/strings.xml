@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JuanIslasLayoutsAndActions</string>
+    <string name="hello_string">Hello There From XML File</string>
+    <string name="android_is_so_awesome">Android is so awesome</string>
+</resources>
