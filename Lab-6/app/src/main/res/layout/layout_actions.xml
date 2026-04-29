@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+    <variable
+        name="user"
+        type="com.example.juanislaslayoutsandactions.User" />
+</data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/actions">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/write_to_logcat"
+        android:textSize="30sp"
+        android:onClick="writeToLogCat"
+        />
+    <Button
+        android:id="@+id/btn_write_to_logcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/write_to_logcat_listener"
+        android:textSize="30sp"
+        />
+    <Button
+        android:id="@+id/btn_show_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Show Toast"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/tv_write_something"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:hint='@{user.firstName + ` ` + user.lastName}' />
+
+    <Button
+        android:id="@+id/btn_write_to_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Write to TextView"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/et_data_binding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:hint="data binding should work here"
+        android:text='@{user.firstName}' />
+
+    <Button
+        android:id="@+id/btn_update_user_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Update user data"
+        android:textSize="30sp" />
+    <EditText
+        android:id="@+id/et_data_binding_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:hint="Update Last Name here"
+        android:text="@={user.lastName}" />
+
+</LinearLayout>
+</layout>
